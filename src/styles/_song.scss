@@ -1,0 +1,55 @@
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 20%;
+    border-radius: 50%;
+  }
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  h3 {
+    padding: 1rem;
+  }
+  .rotating-img {
+    animation: rotate 40s linear infinite;
+  }
+  .running {
+    animation-play-state: running;
+    -webkit-animation-play-state: running; /* For Safari and Chrome */
+  }
+
+  .paused {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused; /* For Safari and Chrome */
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song-container {
+    img {
+      width: 60%;
+    }
+  }
+}
